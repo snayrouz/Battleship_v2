@@ -17,7 +17,7 @@ module Messages
     puts "Would you like to (p)lay or (q)uit game?".colorize(:cyan, :bright)
   end
 
-  def cpu_intro
+  def comp_intro
     puts "I have laid out my ships on the grid.
     \nYou now need to layout your two ships.
     \nThe first is two units long and the\nsecond is three units long.

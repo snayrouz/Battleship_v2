@@ -17,3 +17,8 @@ while true
     puts invalid_selection
   end
 end
+
+# here's will the game will begin
+
+game.computer_place_ships
+puts comp_intro
