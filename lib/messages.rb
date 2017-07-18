@@ -7,18 +7,6 @@ module Messages
 
   def options
     puts "Would you like to (p)lay, read the (i)nstructions, or (q)uit?".colorize(:cyan)
-    answer = gets.chomp.downcase
-    if answer == "p" || answer == "play"
-      @game
-    elsif answer == "i" || answer == "instructions".
-      instructions
-      options
-    elsif answer == "q" || answer == "quit"
-      exit
-    else
-      puts "That's not an option. But no problem, let's get back to the option menu.".colorize(:red)
-      options
-    end
   end
 
   def instructions
@@ -27,8 +15,6 @@ module Messages
     puts "When all of the squares that your ships occupy are hit, the ship will be sunk."
     puts "The first player who sinks all of their opponents ships wins, and the game ends."
     puts "Would you like to (p)lay or (q)uit game?".colorize(:cyan, :bright)
-    answer = get.chomp.downcase
-    
   end
 
   def cpu_intro
@@ -73,6 +59,10 @@ module Messages
 
   def player_win
     "You won! Congrats, now go on and do a little dance!".colorize(:magenta)
+  end
+
+  def invalid_selection
+    "That wasn't even close to being an option. Try again pal: ".colorize(:red, :bright)
   end
 
 end
