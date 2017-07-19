@@ -6,17 +6,18 @@ class Player
     @player_grid = player_grid
     @cpu_grid = cpu_grid
     @shot_at = []
+    
   end
 
-  def place_ship(coords, ship)
-    coords.each do |coord|
-      player_grid.place_ship_at(coords, ship)
+  def place_ship(coordinates, ship)
+    coordinates.each do |coordinate|
+      player_grid.place_ship_at(coordinates, ship)
       ship.coordinates << coord
     end
   end
 
-  def shoot_at(coord)
-    cpu_grid.shoot_att(coord)
+  def shoot_at(coordinate)
+    cpu_grid.shoot_att(coordinate)
     shot_at << coord
   end
 
