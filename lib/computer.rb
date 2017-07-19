@@ -8,6 +8,21 @@ class Computer
     @shot_at     = []
   end
 
+  def place_ships
+    available_cells = cpu_grid.available_cells
+    occupied_cells = []
+    @ships.each do |size, ship|
+      set_orientation(ship)
+      if ship.orientation == 'vertical'
+        place_vertical_ship(ship, available_cells, occupied_cells)
+      else
+        place_horizontal_ship(ship, available_cells, occupied_cells)
+      end
+    end
+  end
+
+  def place_vertical_ship
+  end
   # need place ship method. Take from other version
 
   def random_shot(player_grid)
