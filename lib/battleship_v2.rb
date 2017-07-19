@@ -22,3 +22,16 @@ end
 
 game.computer_place_ships
 puts comp_intro
+
+game.player_place_ships
+puts
+
+game.player_shoots
+
+if game.winner.class = Player
+  puts Message.player_win
+else
+  puts Message.computer_win
+end
+
+game.

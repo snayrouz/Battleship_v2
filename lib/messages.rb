@@ -61,6 +61,10 @@ module Messages
     "You won! Congrats, now go on and do a little dance!".colorize(:magenta)
   end
 
+  def computer_win
+    "You lose! This sure is a hit or miss kind of game ;)".colorize(:red, :bright)
+  end
+
   def invalid_selection
     "That wasn't even close to being an option. Try again pal: ".colorize(:red, :bright)
   end
