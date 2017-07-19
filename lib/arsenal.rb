@@ -1,19 +1,21 @@
+require_relative 'ship'
+
 module Arsenal
 
   def possible_ships
     {'small' => 2, 'large' => 3}
   end
 
-  def set_ships(possible_ships)
+  def set_ships(arsenal_size)
     available_ships = {}
-    possible_ships.each do |key, value|
-      if value <= possible_ships
-        possible_ships -= size
+    arsenal_size.each do |key, value|
+      if value <= arsenal_size
+        arsenal_size -= size
         actual_ships[key] = Ship.new(size)
-
-
-
-
+      end
+    end
+    available_ships
+  end
 
 
 end

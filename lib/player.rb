@@ -6,7 +6,6 @@ class Player
     @player_grid = player_grid
     @cpu_grid = cpu_grid
     @shot_at = []
-    
   end
 
   def place_ship(coordinates, ship)

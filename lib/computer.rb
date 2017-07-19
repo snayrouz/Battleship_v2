@@ -1,5 +1,3 @@
-# the computer is an object
-
 class Computer
 
   def initialize(cpu_grid, player_grid)

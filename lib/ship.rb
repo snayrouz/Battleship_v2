@@ -7,7 +7,6 @@ class Ship
     @size        = size
     @coordinates = []
     @orientation = 'horizontal'
-
   end
 
   def sunk?
@@ -21,13 +20,5 @@ class Ship
   def add_coordinate(coordinate)
     coordinates << coordinate
   end
-
-  def set_ships(possible_ships)
-    available_ships = {}
-    possible_ships.each do |key, value|
-      if value <= possible_ships
-        possible_ships -= size
-        actual_ships[key] = Ship.new(size)
-
 
 end

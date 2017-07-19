@@ -1,9 +1,9 @@
 module Verify
 
-  def invalid_coordinates?(coordinates, ship, grid)
+  def invalid_coordinates?(coordinates, value, grid)
     return true if invalid_format?(coordinates)
     return true if not_on_board(coordinates, grid)
-    return true if coordinates.length != ship.size
+    return true if coordinates.length != value.size
     return true if occupied?(grid, coordinates)
     return false
   end
