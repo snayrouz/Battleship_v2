@@ -6,7 +6,6 @@ class Computer
     @cpu_grid = cpu_grid
     @player_grid = player_grid
     @shot_at = []
-
   end
 
   def random_shot(player_grid)
@@ -20,5 +19,12 @@ class Computer
     shot_at << coordinates
   end
 
+  def open_cells
+    cpu_grid.available_cells
+  end
+
+  def set_orientation
+    ship.orientation = ['horizontal', 'veritcal'].sample
+  end
 
 end
