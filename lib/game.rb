@@ -19,16 +19,16 @@ class Game
     @computer = Computer.new(computer_grid, player_grid, arsenal_size)
     @player = Player.new(player_grid, computer_grid, arsenal_size)
   end
- # will have to setup the game
+
  def setup(last)
    player_grid.board_setup(last)
    computer_grid.board_setup(last)
  end
- # have computer place ships
+
  def computer_place_ships
    computer.place_ships
  end
- # have player place ships
+
  def player_place_ship
    player.ship.each do |key, value|
      puts Messages.ask_for_third_ship
@@ -39,7 +39,7 @@ class Game
      end
    end
  end
- # have invalid messages for invalid inputs
+
  def coordinate_error(coordinates, value, player_grid)
    if invalid_format?(coordinates)
      Messages.invalid_coordinates_submit
@@ -54,7 +54,21 @@ class Game
    end
  end
  # player shot sequence
+  def player_shot_sequence
+    ships_sunk = {}
+    @start_time = Time.now
+    until (computer_grid.occupied_cells.length == 0 || player_grid.occupied_cells.length == 0)
+      computer_grid.print_board
+
+
+
+  end
  # method for knowing when oppenents ship's have sunk
+ def ships_sunk_current
+   if ship.sunk? == true
+     puts Messages.
+ end
+
 
   def winner
     if computer_grid.occupied_cells.empty?

@@ -27,6 +27,10 @@ module Messages
     \nEnter the coordinates for the two unit ship: ".colorize(:magenta)
   end
 
+  def sunkage
+    ""
+  end
+
   def player_miss
     "You fired at #{cell} and missed!".colorize(:red, :bright)
   end
