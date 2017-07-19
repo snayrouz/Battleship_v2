@@ -8,6 +8,8 @@ class Computer
     @shot_at = []
   end
 
+  # need place ship method. Take from other version  
+
   def random_shot(player_grid)
     available = player_grid.available_cells
     coordinates = (available - shot_at).sample
