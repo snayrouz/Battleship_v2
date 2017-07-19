@@ -17,6 +17,10 @@ class Game
 
   end
  # will have to setup the game
+ def setup(last)
+   player_grid.board_setup(last)
+   computer_grid.board_setup(last)
+ end
  # have computer place ships
  # have player place ships
  # have invalid messages for invalid inputs
