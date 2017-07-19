@@ -31,11 +31,23 @@ module Messages
     "You fired at #{cell} and missed!".colorize(:red, :bright)
   end
 
-  def comp_miss
-    output.puts "Your enemy fired at #{cell} missed!".colorize(:red, :bright)
+  def order
+    "That order structure is not correct".colorize(:red, :bright)
   end
 
-  def player_invailid_placement
+  def cell_full
+    "That space is already occupied".colorize(:red, :bright)
+  end
+
+  def comp_miss
+    "Your enemy fired at #{cell} missed!".colorize(:red, :bright)
+  end
+
+  def invalid_coordinates_submit
+    "That's not a valid format. Try something like (A1 B2)".colorize(:red, :bright)
+  end
+
+  def player_invalid_placement
     "Invalid entry for ship placement, try again: ".colorize(:red, :bright)
   end
 

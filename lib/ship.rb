@@ -10,10 +10,6 @@ class Ship
 
   end
 
-  def possible_ships
-    {'small' => 2, 'large' => 3}
-  end
-
   def sunk?
     @coordinates.empty?
   end
