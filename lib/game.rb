@@ -16,7 +16,12 @@ class Game
     @computer_grid = Grid.new
 
   end
-
+ # will have to setup the game
+ # have computer place ships
+ # have player place ships
+ # have invalid messages for invalid inputs
+ # player shot sequence
+ # method for knowing when oppenents ship's have sunk
 
   def winner
       if computer_grid.occupied_cells.empty?
