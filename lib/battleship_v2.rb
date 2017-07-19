@@ -1,4 +1,6 @@
-require 'colorize'
+# require 'colorize'
+require_relative 'game'
+require_relative 'messages'
 include Messages
 
 puts Welcome
@@ -34,4 +36,4 @@ else
   puts Message.computer_win
 end
 
-game.
+game.end_stats

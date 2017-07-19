@@ -4,8 +4,8 @@ class Cell
 
   def initialize
     @occupied = false
-    @status = ' '
-    @ship = nil
+    @status   = ' '
+    @ship     = nil
   end
 
   def place_ship(ship)

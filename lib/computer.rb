@@ -3,12 +3,12 @@
 class Computer
 
   def initialize(cpu_grid, player_grid)
-    @cpu_grid = cpu_grid
+    @cpu_grid    = cpu_grid
     @player_grid = player_grid
-    @shot_at = []
+    @shot_at     = []
   end
 
-  # need place ship method. Take from other version  
+  # need place ship method. Take from other version
 
   def random_shot(player_grid)
     available = player_grid.available_cells

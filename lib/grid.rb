@@ -5,7 +5,7 @@ class Grid
   attr_reader :board, :occupied_cells
 
   def initialize
-    @board = {}
+    @board          = {}
     @occupied_cells = []
   end
 

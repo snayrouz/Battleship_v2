@@ -24,11 +24,11 @@ class Game
  # method for knowing when oppenents ship's have sunk
 
   def winner
-      if computer_grid.occupied_cells.empty?
-        player
-      else
-        computer
-      end
+    if computer_grid.occupied_cells.empty?
+      player
+    else
+      computer
+    end
   end
 
   def end_stats
