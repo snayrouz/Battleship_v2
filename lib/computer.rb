@@ -36,7 +36,28 @@ class Computer
     end
   end
 
-  
+  def make_front_vertical
+    rows = cpu_grid.board.keys
+    low = (rows.length - ship.size) +1
+    front_prospect = rows.first(low)
+    front_prospect.sample + rand(1..rows.length).to_s
+  end
+
+  def place_horizontal_ship(ship, available_cells, occupied_cells)
+    
+
+
+
+  end
+
+  def make_front_horizontal
+    rows = cpu_grid.board.keys
+    high = (rows.length - ship.size) + 1
+    column = rand(1..high).to_s
+    rows.sample + column
+  end
+
+
   # need place ship method. Take from other version
 
   def random_shot(player_grid)
