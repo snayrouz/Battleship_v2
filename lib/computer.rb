@@ -22,7 +22,21 @@ class Computer
   end
 
   def place_vertical_ship
+    front = make_front_vertical(ship)
+    coord_prospect = [front]
+    coord_vert_prospect(ship, coord_prospect)
+
+    if (coord_prospect & occupied_cells).empty?
+      coord_prospect.each do |coord|
+        cpu_grid.place_ship(coord, ship)
+        occupiedl_cells << available_cells.delete(coord)
+      end
+    else
+      place_vertical_ship(ship, available_cells, occupied_cells)
+    end
   end
+
+  
   # need place ship method. Take from other version
 
   def random_shot(player_grid)
