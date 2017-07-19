@@ -1,3 +1,5 @@
+require_relative 'cell'
+
 class Grid
 
   attr_reader :board, :occupied_cells
@@ -10,10 +12,10 @@ class Grid
   def setup_board(last)
     ('A'..last[0]).to_a.each do |letter|
       board[letter] = Hash.new
+    end
       ('1'..last[1..2]).to_a.each do |number|
         board[letter][number] = Cell.new
       end
-    end
   end
 
   def layout
@@ -52,8 +54,14 @@ class Grid
   def print_board
     board_layout = layout
     column_name = board.keys
-    row_name = (1..column_label.length * 6).to_a
-    dividor = ''
-
+    row_name = (1..column_name.length).to_a
+    boarder = '=' * (column_label.length * 6)
+    puts boarder
+    puts '. ' + row_name.join(' ')
+    board_layout.each_with_index do |row, index|
+      puts column_name[index] + row.join(' ')
+    end
+    puts boarder
   end
+
 end

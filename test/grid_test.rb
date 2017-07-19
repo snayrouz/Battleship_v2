@@ -11,11 +11,12 @@ class GridTest < Minitest::Test
     assert_instance_of Grid, grid
   end
 
-  def test_grid_layout
-    grid = Grid.new
-
-    
-  end
+  # def test_print_board
+  #   grid = Grid.new
+  #
+  #   grid.setup_board('D4')
+  #   assert_equal
+  # end
 
   def test_grid_knows_available_cells
     grid = Grid.new
