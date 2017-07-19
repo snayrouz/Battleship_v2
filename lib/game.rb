@@ -29,7 +29,7 @@ class Game
  end
  # have player place ships
  def player_place_ship
-
+   player.ship.each do |key, 
 
  end
  # have invalid messages for invalid inputs
