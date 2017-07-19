@@ -28,7 +28,7 @@ class Computer
 
     if (coord_prospect & occupied_cells).empty?
       coord_prospect.each do |coord|
-        cpu_grid.place_ship(coord, ship)
+        cpu_grid.place_ship_at(coord, ship)
         occupiedl_cells << available_cells.delete(coord)
       end
     else
@@ -44,10 +44,19 @@ class Computer
   end
 
   def place_horizontal_ship(ship, available_cells, occupied_cells)
-    
+    front = make_front_horizontal(ship)
+    coord_prospect = [front]
+    coord_horz_prospect(ship, coord_prospect)
 
-
-
+    if (coord_prospect & occupied_cells).empty?
+      coord_prospect.each do |coord|
+        cpu_grid.place_ship_at(coord, ship)
+        ship.coordinates << coord
+        occupied_cells << available_cells.delete(coord)
+      end
+    else
+      place_horz_ship(ship, available_cells, occupied_cells)
+    end
   end
 
   def make_front_horizontal
