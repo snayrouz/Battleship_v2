@@ -24,7 +24,14 @@ class Game
    computer_grid.board_setup(last)
  end
  # have computer place ships
+ def computer_place_ships
+   computer.place_ships
+ end
  # have player place ships
+ def player_place_ship
+
+
+ end
  # have invalid messages for invalid inputs
  # player shot sequence
  # method for knowing when oppenents ship's have sunk
