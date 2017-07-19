@@ -1,5 +1,7 @@
 class Player
 
+  attr_reader :cpu_grid, :player_grid, :shot_at
+
   def initialize(player_grid, cpu_grid)
     @player_grid = player_grid
     @cpu_grid = cpu_grid

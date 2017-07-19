@@ -1,4 +1,6 @@
 require 'colorize'
+require './messages'
+
 module Messages
 
   def welcome

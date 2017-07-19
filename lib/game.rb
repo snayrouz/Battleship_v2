@@ -6,7 +6,9 @@ require_relative 'messages'
 
 class Game
 
-  inlude Messages, Verify
+  include Messages
+  include Verify
+
   attr_reader :player, :computer, :player_grid, :computer_grid, :start_time
 
   def initialize

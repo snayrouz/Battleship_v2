@@ -1,12 +1,13 @@
 # require 'colorize'
 require_relative 'game'
 require_relative 'messages'
+
 include Messages
 
-puts Welcome
+puts Messages.Welcome
 
 while true
-  puts options
+  puts Messages.options
   answer = gets.chomp.downcase
 
   if answer == "p" || answer == "play"
@@ -23,7 +24,7 @@ end
 # here's will the game will begin
 
 game.computer_place_ships
-puts comp_intro
+puts Messages.comp_intro
 
 game.player_place_ships
 puts
@@ -31,9 +32,9 @@ puts
 game.player_shoots
 
 if game.winner.class = Player
-  puts Message.player_win
+  puts Messages.player_win
 else
-  puts Message.computer_win
+  puts Messages.computer_win
 end
 
 game.end_stats

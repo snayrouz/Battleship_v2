@@ -8,6 +8,10 @@ class Computer
     @shot_at     = []
   end
 
+  def open
+    cpu_grid.available_cells
+  end
+
   def place_ships
     available_cells = cpu_grid.available_cells
     occupied_cells = []
@@ -19,6 +23,10 @@ class Computer
         place_horizontal_ship(ship, available_cells, occupied_cells)
       end
     end
+  end
+
+  def set_orientation
+    ship.orientation = ['horizontal', 'veritcal'].sample
   end
 
   def place_vertical_ship
@@ -66,9 +74,6 @@ class Computer
     rows.sample + column
   end
 
-
-  # need place ship method. Take from other version
-
   def random_shot(player_grid)
     available = player_grid.available_cells
     coordinates = (available - shot_at).sample
@@ -80,12 +85,6 @@ class Computer
     shot_at << coordinates
   end
 
-  def open_cells
-    cpu_grid.available_cells
-  end
 
-  def set_orientation
-    ship.orientation = ['horizontal', 'veritcal'].sample
-  end
 
 end
