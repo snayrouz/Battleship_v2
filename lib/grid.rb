@@ -35,20 +35,20 @@ class Grid
     cells.flatten
   end
 
-  def shoot_at(coordinates)
-    board[coordinates[0]][coordinates[1..2].shoot_at(coordinates)]
-    occupied_cells.delete(coordinates)
+  def shoot_at(coordinate)
+    board[coordinate[0]][coordinate[1..2].shoot_at(coordinate)]
+    occupied_cells.delete(coordinate)
   end
 
-  def space_occupied?(coordinates)
-    board[coordinates[0]][coordinates[1]].occupied
+  def space_occupied?(coordinate)
+    board[coordinate[0]][coordinate[1]].occupied
   end
 
-  def place_ship(coordinates, ship)
-    nil if space_occupied?(coordinates)
-    place = board[coordinates[0]][coordinates[1..2]]
+  def place_ship(coordinate, ship)
+    nil if space_occupied?(coordinate)
+    place = board[coordinate[0]][coordinate[1..2]]
     place.place_ship(ship)
-    occupied_cells << coordinates
+    occupied_cells << coordinate
   end
 
   def print_board
