@@ -6,11 +6,11 @@ class Computer
     include Arsenal
 
   def initialize(cpu_grid, player_grid)
-    @cpu_grid    = cpu_grid
-    @player_grid = player_grid
+    @cpu_grid     = cpu_grid
+    @player_grid  = player_grid
     @arsenal_size = arsenal_size
-    @ships = self.set_ships(arsenal_size)
-    @shot_at     = []
+    @ships        = self.set_ships(arsenal_size)
+    @shot_at      = []
   end
 
   def open
@@ -89,7 +89,5 @@ class Computer
     player_grid.shoot_at(coordinates)
     shot_at << coordinates
   end
-
-
 
 end

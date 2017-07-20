@@ -16,44 +16,44 @@ class Game
     @shots_fired   = 0
     @player_grid   = Grid.new
     @computer_grid = Grid.new
-    @computer = Computer.new(computer_grid, player_grid, arsenal_size)
-    @player = Player.new(player_grid, computer_grid, arsenal_size)
+    @computer      = Computer.new(computer_grid, player_grid, arsenal_size)
+    @player        = Player.new(player_grid, computer_grid, arsenal_size)
   end
 
- def setup(last)
-   player_grid.board_setup(last)
-   computer_grid.board_setup(last)
- end
+  def setup(last)
+    player_grid.board_setup(last)
+    computer_grid.board_setup(last)
+  end
 
- def computer_place_ships
-   computer.place_ships
- end
+  def computer_place_ships
+    computer.place_ships
+  end
 
- def player_place_ship
+  def player_place_ship
    player.ship.each do |key, value|
-     puts Messages.ask_for_third_ship
+          puts Messages.ask_for_third_ship
      coordinates = get.chomp.upcase.strip.split
      while invalid_coordinates?(coordinates, value, player_grid)
-       puts Messages.player_invalid_placement
+             puts Messages.player_invalid_placement
        coordinates = get.chomp.upcase.strip.split
      end
-   end
- end
+    end
+  end
 
- def coordinate_error(coordinates, value, player_grid)
-   if invalid_format?(coordinates)
+  def coordinate_error(coordinates, value, player_grid)
+    if invalid_format?(coordinates)
      Messages.invalid_coordinates_submit
-   elsif coordinates.length < value.size
-     Messages.invalid_length
-   elsif not_on_board(coordinates, grid)
-     Messages.invalid_coordinates_submit
-   elsif occupied?(grid, coordinates)
-     Messages.cell_full
-   elsif invalid_coordinates(coordinates, value, player_grid)
-     Messages.order
-   end
- end
- # player shot sequence
+    elsif coordinates.length < value.size
+       Messages.invalid_length
+    elsif not_on_board(coordinates, grid)
+       Messages.invalid_coordinates_submit
+    elsif occupied?(grid, coordinates)
+       Messages.cell_full
+    elsif invalid_coordinates(coordinates, value, player_grid)
+       Messages.order
+    end
+  end
+
   def player_shot_sequence
     ships_sunk = {}
     @start_time = Time.now
