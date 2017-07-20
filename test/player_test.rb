@@ -7,6 +7,14 @@ require_relative '../lib/ship'
 
 class PlayerTest < Minitest::Test
 
+  attr_reader :player, :cpu_grid, :player_grid
+  def setup
+    @cpu_grid = Grid.new
+    @player_grid = Grid.new
+    player_grid.board_setup('D4')
+    @player = Player.new(player_grid, cpu_grid)
+  end
+
   def test_player_can_place_ships
     player = Player.new
 
