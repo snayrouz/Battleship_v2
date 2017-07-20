@@ -33,6 +33,7 @@ module Messages
 
   def sunkage_player
     "Nice job! You sunk the computer's ship!".colorize(:green)
+  end
 
   def player_miss
     "You fired at #{cell} and missed!".colorize(:red, :bright)

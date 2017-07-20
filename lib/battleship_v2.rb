@@ -1,4 +1,4 @@
-# require 'colorize'
+require 'colorize'
 require_relative 'game'
 require_relative 'messages'
 
@@ -21,17 +21,15 @@ while true
   end
 end
 
-# here's will the game will begin
-
 game.computer_place_ships
 puts Messages.comp_intro
 
 game.player_place_ships
-puts
+puts Messages.ask_for_third_ship
 
 game.player_shoots
 
-if game.winner.class = Player
+if game.winner.class == Player
   puts Messages.player_win
 else
   puts Messages.computer_win
