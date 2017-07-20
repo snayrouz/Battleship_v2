@@ -76,22 +76,19 @@ class Game
     ships_are_sinking(ships_sunk)
   end
 
- # method for knowing when oppenents ship's have sunk
   def ships_are_sinking(ships_sunk)
     player.ships.each do |key, ship|
       if ship.sunk?
         puts Messages.sunkage_comp
       end
-      computer.ships.each do |key, ship|
-        if ship.sunk?
-          puts Messages.sunkage_player
-        end
+    end
+
+    computer.ships.each do |key, ship|
+      if ship.sunk?
+        puts Messages.sunkage_player
       end
     end
   end
-
-
-
 
   def winner
     if computer_grid.occupied_cells.empty?
