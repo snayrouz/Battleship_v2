@@ -1,9 +1,11 @@
 require './lib/game'
 require './lib/messages'
 
+# game = Game.new(2)
 include Messages
 
-puts Messages.Welcome
+
+puts Messages.welcome
 
 while true
   puts Messages.options
@@ -21,11 +23,11 @@ while true
   end
 end
 
-game = Game.new(2)
-game.computer_place_ships
+
+Game.computer_place_ships
 puts Messages.comp_intro
 
-game.player_place_ships
+Game.player_place_ships
 puts Messages.ask_for_third_ship
 
 game.player_shoots

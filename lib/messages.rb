@@ -1,7 +1,7 @@
 module Messages
 
-  def welcome
-    prints "Welcome to BATTLESHIP"
+  def self.welcome
+    "Welcome to BATTLESHIP"
   end
 
   def options
@@ -13,7 +13,6 @@ module Messages
     puts "You won't be able to see the computer's board so you'll have to try and guess where their ships are."
     puts "When all of the squares that your ships occupy are hit, the ship will be sunk."
     puts "The first player who sinks all of their opponents ships wins, and the game ends."
-    puts "Would you like to (p)lay or (q)uit game?"
   end
 
   def comp_intro

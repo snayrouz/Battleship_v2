@@ -1,5 +1,5 @@
 require './lib/player'
-require './lib/computer_player'
+require './lib/computer'
 require './lib/grid'
 require './lib/verify'
 require './lib/messages'
