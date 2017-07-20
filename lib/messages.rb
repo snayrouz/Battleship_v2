@@ -32,10 +32,6 @@ module Messages
     puts "Nice job! You sunk the computer's ship!"
   end
 
-  # def player_miss
-  #   "You fired at #{cell} and missed!"
-  # end
-
   def order
     puts "That order structure is not correct"
   end
@@ -63,10 +59,6 @@ module Messages
   def invalid_length
     puts "Your ship is either too long or too short. Try again: "
   end
-
-  # def direct_hit(cell)
-  #   "Direct hit at #{cell}!"
-  # end
 
   def ask_for_third_ship
     puts "Now enter the placement coordinates for your long ship: "

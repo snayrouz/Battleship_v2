@@ -1,4 +1,3 @@
-# require 'colorize'
 require './lib/game'
 require './lib/messages'
 
