@@ -1,4 +1,4 @@
-require 'arsenal'
+require './lib/arsenal'
 
 class Computer
 

@@ -1,6 +1,6 @@
 require 'colorize'
-require './game'
-require './messages'
+require './lib/game'
+require './lib/messages'
 
 include Messages
 

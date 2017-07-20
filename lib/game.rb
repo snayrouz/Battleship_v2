@@ -1,8 +1,8 @@
-require_relative 'player'
-require_relative 'computer_player'
-require_relative 'grid'
-require_relative 'validator'
-require_relative 'messages'
+require './lib/player'
+require './lib/computer_player'
+require './lib/grid'
+require './lib/validator'
+require './lib/messages'
 
 class Game
 

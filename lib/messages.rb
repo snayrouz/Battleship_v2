@@ -1,5 +1,4 @@
 require 'colorize'
-require './messages'
 
 module Messages
 
