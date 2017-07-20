@@ -57,11 +57,25 @@ class Game
   def player_shot_sequence
     ships_sunk = {}
     @start_time = Time.now
-    until (computer_grid.occupied_cells.length == 0 || player_grid.occupied_cells.length == 0)        computer_grid.print_board
+    until (computer_grid.occupied_cells.length == 0 || player_grid.occupied_cells.length == 0)
+      computer_grid.print_board
+      player_grid.print_board
+      ships_are_sinking(ships_sunk)
 
+      puts Messages.player_turn
+      coordinate = gets.chomp.upcase.strip
+      while cannot_fire_at_cell(coordinate, player_grid)
+        puts Messages.invalid_selection
+        coordinate = gets.chomp.upcase
+      end
 
-
+      player.shoot_at(coordinate)
+      computer.random_shot(player_grid)
+      @shots_fired += 1
+    end
+    ships_are_sinking(ships_sunk)
   end
+
  # method for knowing when oppenents ship's have sunk
   def ships_are_sinking(ships_sunk)
     player.ships.each do |key, ship|
