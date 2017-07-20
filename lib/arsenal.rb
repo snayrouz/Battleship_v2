@@ -17,5 +17,4 @@ module Arsenal
     available_ships
   end
 
-
 end
