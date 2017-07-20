@@ -1,7 +1,7 @@
 require './lib/player'
 require './lib/computer_player'
 require './lib/grid'
-require './lib/validator'
+require './lib/verify'
 require './lib/messages'
 
 class Game

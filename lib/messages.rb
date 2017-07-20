@@ -1,20 +1,11 @@
 module Messages
 
-<<<<<<< HEAD
-  def self.welcome
-    prints "Welcome to BATTLESHIP".colorize(:cyan, :bright)
-  end
-
-  def self.options
-    puts "Would you like to (p)lay, read the (i)nstructions, or (q)uit?".colorize(:cyan)
-=======
   def welcome
     prints "Welcome to BATTLESHIP"
   end
 
   def options
     puts "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
->>>>>>> requires
   end
 
   def instructions
