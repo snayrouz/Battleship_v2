@@ -1,6 +1,6 @@
 require 'colorize'
-require_relative 'game'
-require_relative 'messages'
+require './game'
+require './messages'
 
 include Messages
 
