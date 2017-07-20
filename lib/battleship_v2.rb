@@ -1,4 +1,4 @@
-require 'colorize'
+# require 'colorize'
 require './lib/game'
 require './lib/messages'
 
