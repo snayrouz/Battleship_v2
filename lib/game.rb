@@ -57,17 +57,26 @@ class Game
   def player_shot_sequence
     ships_sunk = {}
     @start_time = Time.now
-    until (computer_grid.occupied_cells.length == 0 || player_grid.occupied_cells.length == 0)
-      computer_grid.print_board
+    until (computer_grid.occupied_cells.length == 0 || player_grid.occupied_cells.length == 0)        computer_grid.print_board
 
 
 
   end
  # method for knowing when oppenents ship's have sunk
- def ships_sunk_current
-   if ship.sunk? == true
-     puts Messages.
- end
+  def ships_are_sinking(ships_sunk)
+    player.ships.each do |key, ship|
+      if ship.sunk?
+        puts Messages.sunkage_comp
+      end
+      computer.ships.each do |key, ship|
+        if ship.sunk?
+          puts Messages.sunkage_player
+        end
+      end
+    end
+  end
+
+
 
 
   def winner

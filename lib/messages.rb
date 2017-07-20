@@ -27,9 +27,12 @@ module Messages
     \nEnter the coordinates for the two unit ship: ".colorize(:magenta)
   end
 
-  def sunkage
-    ""
+  def sunkage_comp
+    "The machines have won! Just but defintely sunk your ship".colorize(:red)
   end
+
+  def sunkage_player
+    "Nice job! You sunk the computer's ship!".colorize(:green)
 
   def player_miss
     "You fired at #{cell} and missed!".colorize(:red, :bright)

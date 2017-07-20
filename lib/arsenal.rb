@@ -2,7 +2,7 @@ require_relative 'ship'
 
 module Arsenal
 
-  def possible_ships
+  def arsenal_size
     {'small' => 2, 'large' => 3}
   end
 
