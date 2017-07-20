@@ -5,6 +5,7 @@ require_relative "../lib/ship"
 require_relative "../lib/grid"
 
 class VerifyTest < Minitest::Test
+  
 
  def test_it_knows_valid_coordinates
    verify = Verify.new
