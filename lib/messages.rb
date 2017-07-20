@@ -25,51 +25,43 @@ module Messages
 
 
   def sunkage_comp
-    "The machines have won! Just but defintely sunk your ship".colorize(:red)
+    "The machines have won! Just but defintely sunk your ship"
   end
 
   def sunkage_player
-    "Nice job! You sunk the computer's ship!".colorize(:green)
-  end
-
-  def player_miss
-    "You fired at #{cell} and missed!".colorize(:red, :bright)
+    "Nice job! You sunk the computer's ship!"
   end
 
   def order
-    "That order structure is not correct".colorize(:red, :bright)
+    "That order structure is not correct"
   end
 
   def cell_full
-    "That space is already occupied".colorize(:red, :bright)
+    "That space is already occupied"
   end
 
   def comp_miss
-    "Your enemy fired at #{cell} missed!".colorize(:red, :bright)
+    "Your enemy fired at #{cell} missed!"
   end
 
   def invalid_coordinates_submit
-    "That's not a valid format. Try something like (A1 B2)".colorize(:red, :bright)
+    "That's not a valid format. Try something like (A1 B2)"
   end
 
   def player_invalid_placement
-    "Invalid entry for ship placement, try again: ".colorize(:red, :bright)
+    "Invalid entry for ship placement, try again: "
   end
 
   def player_invalid_shot
-    "Invalid shot, try again: ".colorize(:red, :bright)
+    "Invalid shot, try again: "
   end
 
   def invalid_length
-    "Your ship is either too long or too short. Try again: ".colorize(:red, :bright)
-  end
-
-  def direct_hit(cell)
-    "Direct hit at #{cell}!".colorize(:yellow)
+    "Your ship is either too long or too short. Try again: "
   end
 
   def ask_for_third_ship
-    "Now enter the placement coordinates for your long ship: ".colorize(:green)
+    "Now enter the placement coordinates for your long ship: "
   end
 
   def player_turn

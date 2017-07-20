@@ -1,4 +1,5 @@
 require './lib/arsenal'
+require './lib/game'
 
 class Computer
 

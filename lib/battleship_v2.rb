@@ -12,7 +12,6 @@ while true
   answer = gets.chomp.downcase
 
   if answer == "p" || answer == "play"
-
     break
   elsif answer == "i" || answer == "instructions"
     puts instructions
@@ -23,8 +22,8 @@ while true
   end
 end
 
-
-Game.computer_place_ships
+# Game.setup('D4')
+# Game.computer_place_ships
 puts Messages.comp_intro
 
 Game.player_place_ships
@@ -39,4 +38,3 @@ else
 end
 
 game.end_stats
-game = Game.new(2)
