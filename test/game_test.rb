@@ -1,4 +1,4 @@
-# require 'simplecov'
+require 'simplecov'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/game'
@@ -64,7 +64,7 @@ class GameTest < Minitest::Test
     game = Game.new
 
     game.computer_grid.occupied_cells.clear
-    assert_instance_of Player, game.winner  
+    assert_instance_of Player, game.winner
   end
 
 end
